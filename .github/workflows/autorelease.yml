@@ -99,7 +99,7 @@ jobs:
     - name: Build
       if: steps.release-needed.outputs.DO_RELEASE == 'true'
       run: |
-        python3 setup.py build sdist bdist_wheel --universal
+        python3 setup.py build --verbose sdist bdist_wheel --universal
 
     - name: Commit new version
       if: steps.release-needed.outputs.DO_RELEASE == 'true'
