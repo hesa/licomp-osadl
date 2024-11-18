@@ -15,12 +15,12 @@ from licomp_osadl.config import my_supported_api_version
 from licomp.interface import Licomp
 from licomp.interface import Provisioning
 from licomp.interface import UseCase
-from licomp.interface import Modification
 from licomp.interface import CompatibilityStatus
 
 SCRIPT_DIR = os.path.dirname(__file__)
 MATRIX_FILE_NAME = 'matrixseqexpl.json'
-MATRIX_FILE = os.path.join(os.path.join(SCRIPT_DIR,'var'),MATRIX_FILE_NAME)
+MATRIX_FILE = os.path.join(os.path.join(SCRIPT_DIR, 'var'), MATRIX_FILE_NAME)
+
 
 class LicompOsadl(Licomp):
 
@@ -30,7 +30,7 @@ class LicompOsadl(Licomp):
         self.usecases = [UseCase.SNIPPET]
         logging.debug(f'Reading JSON file: {MATRIX_FILE}')
 
-        with open (MATRIX_FILE) as fp:
+        with open(MATRIX_FILE) as fp:
             self.matrix = json.load(fp)
             self.licenses = {}
             for lic in self.matrix['licenses']:
@@ -43,13 +43,13 @@ class LicompOsadl(Licomp):
                     new_compat['compatibility'] = compat['compatibility']
                     new_compat['explanation'] = compat['explanation']
                     self.licenses[lic_name][compat_name] = new_compat
-                
+
         self.ret_statuses = {
             "Same": CompatibilityStatus.COMPATIBLE,
             "Yes": CompatibilityStatus.COMPATIBLE,
             "No": CompatibilityStatus.INCOMPATIBLE,
             "Unknown": CompatibilityStatus.UNKNOWN,
-            "Check dependency": CompatibilityStatus.DEPENDS
+            "Check dependency": CompatibilityStatus.DEPENDS,
         }
 
     def name(self):
@@ -63,7 +63,7 @@ class LicompOsadl(Licomp):
 
     def supported_licenses(self):
         return list(self.licenses.keys())
-        
+
     def supported_usecases(self):
         return self.usecases
 
@@ -82,4 +82,4 @@ class LicompOsadl(Licomp):
         result = self.licenses[outbound][inbound]
         compat = result['compatibility']
         compat_value = self.ret_statuses[compat]
-        return self.outbound_inbound_reply(compat_value,result['explanation'])
+        return self.outbound_inbound_reply(compat_value, result['explanation'])
