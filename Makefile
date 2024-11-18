@@ -12,7 +12,7 @@ clean:
 	rm -fr .pytest_cache
 
 py-lint:
-	PYTHONPATH=. flake8 flame
+	PYTHONPATH=. flake8 licomp
 
 build:
 	rm -fr build && python3 setup.py sdist
