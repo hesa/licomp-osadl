@@ -19,7 +19,8 @@ from licomp.interface import CompatibilityStatus
 
 SCRIPT_DIR = os.path.dirname(__file__)
 MATRIX_FILE_NAME = 'matrixseqexpl.json'
-MATRIX_FILE = os.path.join(os.path.join(SCRIPT_DIR, 'var'), MATRIX_FILE_NAME)
+MATRIX_DIR = os.path.join(SCRIPT_DIR, 'data')
+MATRIX_FILE = os.path.join(MATRIX_DIR, MATRIX_FILE_NAME)
 
 
 class LicompOsadl(Licomp):
