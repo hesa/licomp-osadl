@@ -12,7 +12,7 @@ clean:
 	rm -fr .pytest_cache
 
 py-lint:
-	PYTHONPATH=. flake8 licomp
+	PYTHONPATH=. flake8 licomp-osadl
 
 build:
 	rm -fr build && python3 setup.py sdist
