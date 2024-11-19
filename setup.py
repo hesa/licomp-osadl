@@ -17,7 +17,7 @@ with open('requirements-dev.txt') as f:
     requirements_dev = f.read().splitlines()
 
 setuptools.setup(
-    name=module_name,
+    name='licomp_osadl',
     version=licomp_osadl_version,
     author="Henrik Sanklef",
     author_email="hesa@sandklef.com",
@@ -33,7 +33,7 @@ setuptools.setup(
         ],
     },
     package_data={
-        f'{module_name}': ['var/*.json'],
+        f'{module_name}': ['data/*.json'],
     },
     install_requires=requirements,
     extras_require={
