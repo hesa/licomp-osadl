@@ -24,7 +24,7 @@ Files: README.md
 Copyright: Henrik Sandklef
 License: GPL-3.0-or-later
 
-Files: licomp_osadl/var/matrixseqexpl.json
+Files: licomp_osadl/data/matrixseqexpl.json
 Copyright: © 2017 - 2024 Open Source Automation Development Lab (OSADL) eG and contributors, infoªosadl.org 
 License: CC-BY-4.0
 
