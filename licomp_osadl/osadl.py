@@ -11,6 +11,7 @@ import logging
 from licomp_osadl.config import module_name
 from licomp_osadl.config import licomp_osadl_version
 from licomp_osadl.config import my_supported_api_version
+from licomp_osadl.config import disclaimer
 
 from licomp.interface import Licomp
 from licomp.interface import Provisioning
@@ -70,6 +71,9 @@ class LicompOsadl(Licomp):
 
     def supported_provisionings(self):
         return self.provisionings
+
+    def disclaimer(self):
+        return disclaimer
 
     def _status_to_licomp_status(self, status):
         return self.ret_statuses[status]
