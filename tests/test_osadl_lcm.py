@@ -56,13 +56,13 @@ def test_incompat_2():
 def test_incompat_3():
     ret = lo.outbound_inbound_compatibility("BSD-3-Clause", "DO_NO_EXIST", usecase=UseCase.SNIPPET, provisioning=Provisioning.BIN_DIST)
     logging.debug("ret: " + str(ret))
-    assert ret['compatibility_status'] == 'unsupported'
+    assert ret['compatibility_status'] == None
     assert ret['status'] == "failure"
 
 def test_incompat_4():
     ret = lo.outbound_inbound_compatibility("DO_NO_EXIST", "GPL-2.0-only", usecase=UseCase.SNIPPET, provisioning=Provisioning.BIN_DIST)
     logging.debug("ret: " + str(ret))
-    assert ret['compatibility_status'] == 'unsupported'
+    assert ret['compatibility_status'] == None
     assert ret['status'] == "failure"
 
 def test_api_version():
