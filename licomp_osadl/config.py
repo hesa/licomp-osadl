@@ -30,7 +30,7 @@ COPYRIGHT
   License GPL-3.0-or-later
 
 ATTRIBUTION
-  lci-osadl is using the license compatibility matrix from osadl.org.
+  licomp-osadl is using the license compatibility matrix from osadl.org.
 
 
 """
