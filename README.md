@@ -8,9 +8,11 @@ Licomp Osadl provides compatibility data:
 * when copying code from one Open Source component to another and
 * the Open Source components are unmodified
 
+Licomp Osadl uses OSADL's [license matrix](https://www.osadl.org/fileadmin/checklists/matrix.json), part of [OSADL's license checklist](https://www.osadl.org/Access-to-raw-data.oss-compliance-raw-data-access.0.html)
+
 ## Introduction 
 
-Licomp Osadl is using the [Licomp](https://github.com/hesa/licomp) api to communicate with the Licomp resources. For a better understanding of Licomp we suggest you read:
+Licomp Osadl implements the [Licomp](https://github.com/hesa/licomp) api for communication with the Licomp resources. For a better understanding of Licomp we suggest you read:
 
 * [Licomp basic concepts](https://github.com/hesa/licomp/#licomp-concepts)
 * [Licomp reply format](https://github.com/hesa/licomp/blob/main/docs/reply-format.md)
