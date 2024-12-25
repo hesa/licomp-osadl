@@ -9,6 +9,8 @@ import os
 import logging
 
 from licomp_osadl.config import module_name
+from licomp_osadl.config import module_url
+from licomp_osadl.config import osadl_checklist_url
 from licomp_osadl.config import licomp_osadl_version
 from licomp_osadl.config import my_supported_api_version
 from licomp_osadl.config import disclaimer
@@ -56,6 +58,12 @@ class LicompOsadl(Licomp):
 
     def name(self):
         return module_name
+
+    def url(self):
+        return module_url
+
+    def data_url(self):
+        return osadl_checklist_url
 
     def version(self):
         return licomp_osadl_version
