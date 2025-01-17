@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-licomp_osadl_version = '0.4.0'
+licomp_osadl_version = '0.4.1'
 my_supported_api_version = '0.5'
 
 cli_name = 'licomp-osadl'
